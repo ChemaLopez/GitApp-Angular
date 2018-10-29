@@ -1,0 +1,25 @@
+<div class="item mb-4 mt-4">
+    <label>
+        <input type="image" class="align-middle" src="assets/back-image.png" width="15%" ng-click="tableCtrl.back()">
+
+        Atras
+    </label>
+</div>
+<table id="table" class="align-middle">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Forks</th>
+            <th>Url</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="element in tableCtrl.userRepoList">
+            <td> {{element.name}}</td>
+            <td> {{element.description}} </td>
+            <td> {{element.forks}}</td>
+            <td> <a href="{{element.url}}"></a>{{element.url}}</a> </td>
+        </tr>
+    </tbody>
+</table>

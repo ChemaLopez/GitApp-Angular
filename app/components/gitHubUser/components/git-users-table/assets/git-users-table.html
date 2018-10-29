@@ -1,0 +1,19 @@
+
+<table id="table" class="align-middle">
+    <thead>
+        <tr>
+            <th>Avatar</th>
+            <th>Login</th>
+            <th>Repos_url</th>
+            <th>Followers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="element in tableCtrl.userList">
+            <td> <img ng-src="{{element.avatar_url}}" width="30%"></td>
+            <td> {{element.login}} </td>
+            <td> <a ng-click="tableCtrl.selectUser= element.repos_url; tableCtrl.reposModal()">{{element.repos_url}}</a> </td>
+            <td> <a  ng-click=" tableCtrl.selectUser= element.followers_url; tableCtrl.followersModal()">{{element.followers_url}}</a> </td>
+        </tr>
+    </tbody>
+</table>

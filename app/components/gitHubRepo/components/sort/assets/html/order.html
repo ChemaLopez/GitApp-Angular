@@ -1,0 +1,34 @@
+<div  ng-if= "sortCtrl.repoList">
+        <form  id="order">
+    <label>
+        <h3>Ordenar por:</h3>
+    </label>
+    <label><input type="radio" name="order" value="Bugs" ng-click="sortCtrl.sortBugs()">Bugs</label>
+    <label><input type="radio" name="order" value="Forks" ng-click="sortCtrl.sortForks()">Forks</label>
+    <label><input type="radio" name="order" value="Watchers" ng-click="sortCtrl.sortWatchers()">Watchers</label>
+</form>
+<h3  id="numResult"> El numero de resultados es :  {{sortCtrl.repoList.total_count}}</h3>
+<table id="table" class="align-middle">
+    <thead>
+        <tr>
+            <th>Avatar</th>
+            <th>Repositorio</th>
+            <th>Url</th>
+            <th>Nº Forks</th>
+            <th>Nº Observadores</th>
+            <th>Nº Bugs abiertos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="element in sortCtrl.repoList.list"  >
+            <td> <img ng-src="{{element.avatar}}" width="30%"></td>
+            <td> "{{element.name}}" </td> 
+            <td> <a href="{{element.url}}">{{element.url}}</a> </td>
+            <td> {{element.forks}}</td>
+            <td> {{element.watcher}}</td>
+            <td> {{element.bugs}}</td>
+        </tr>
+
+    </tbody>
+</table>
+</div>

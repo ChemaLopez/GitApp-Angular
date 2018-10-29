@@ -1,0 +1,34 @@
+{
+  "name": "angularYarnProject",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Chema Lopez",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "angular": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "glob": "^7.1.3",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-dedupe": "0.0.2",
+    "gulp-flatten": "^0.4.0",
+    "gulp-iife": "^0.3.0",
+    "gulp-include": "^2.3.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.1",
+    "http-server": "^0.11.1",
+    "main-yarn-files": "^3.0.4",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "start": "gulp build && http-server ./build/"
+  }
+}

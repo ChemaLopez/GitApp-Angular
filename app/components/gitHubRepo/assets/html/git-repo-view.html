@@ -1,0 +1,12 @@
+<nav-component></nav-component>
+<h2  class="text-center mt-5 mb-5">Repo-App</h2>
+<form >
+    Introduce el nombre de los repositorios que deseas buscar: <input type="text" id="repos" required ng-model="gitRepoCtrl.valueRepo" >
+    <input type="button"  id="find" value="Buscar" ng-click="gitRepoCtrl.launchRepo()">
+</form>
+<div ng-if="gitRepoCtrl.model.repoList.list">
+    <sort-component repo-list="gitRepoCtrl.model.repoList"></sort-component>
+</div>
+<div ng-if="gitRepoCtrl.model.showOrderComponent">
+        <img src="./assets/load.gif" class="mx-auto d-block" id=load>
+</div>

@@ -1,0 +1,12 @@
+<nav-component></nav-component>
+<h2 class="text-center  mt-5 mb-5"">User-App</h2>
+<div ng-if="!gitUserCtrl.model.showUserList" class="col-md-3 offset-4">
+<img src="./assets/load.gif" id=load>
+</div>
+<div ng-if="gitUserCtrl.model.showUserList">
+
+    <git-users-table ng-show="!gitUserCtrl.model.details"user-list="gitUserCtrl.model.repoUser"; select-user="gitUserCtrl.model.selectUser"></git-users-table>
+    
+    <git-user-followers-detail ng-show="gitUserCtrl.model.details && !gitUserCtrl.model.showRepo" user-follower-list="gitUserCtrl.model.followersDetail" ></git-user-followers-detail>
+    <git-user-repo-detail ng-show="gitUserCtrl.model.details &&  gitUserCtrl.model.showRepo" user-repo-list="gitUserCtrl.model.repoDetail" ></git-user-followers-detail>
+</div>
